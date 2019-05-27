@@ -1,10 +1,13 @@
 {
   "name": "last-commit-message",
   "description": "Get the latest commit message in a git repository.",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "author": "Renée Kooi <renee@kooi.me>",
   "bugs": {
     "url": "https://github.com/goto-bus-stop/last-commit-message/issues"
+  },
+  "dependencies": {
+    "simple-concat": "^1.0.0"
   },
   "devDependencies": {
     "rimraf": "^2.6.3",
@@ -30,8 +33,5 @@
   },
   "scripts": {
     "test": "standard && node test | tap-spec"
-  },
-  "dependencies": {
-    "simple-concat": "^1.0.0"
   }
 }
