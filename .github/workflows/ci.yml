@@ -1,0 +1,19 @@
+name: CI
+runs-on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [4.x, 6.x, 8.x, 10.x, 12.x, 14.x, 15.x]
+    steps:
+      - name: Checkout sources
+        uses: actions/checkout@v2
+      - name: Install Node.js ${{matrix.node}}
+        uses: actions/setup-node@v2-beta
+        with:
+          node-version: ${{matrix.node}}
+      - name: Install dependencies
+        run: npm install
+      - name: Run tests
+        run: npm test
