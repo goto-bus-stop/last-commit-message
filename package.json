@@ -10,7 +10,7 @@
     "simple-concat": "^1.0.0"
   },
   "devDependencies": {
-    "rimraf": "^2.6.3",
+    "rimraf": "^3.0.2",
     "standard": "^14.0.0",
     "tap-spec": "^5.0.0",
     "tape": "^4.0.0",
